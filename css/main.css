@@ -74,7 +74,6 @@ html {
 	font-family: 'Segoe UI',Tahoma,Helvetica,sans-serif;
 	font-size: 1em;
 
-	
 	background: url("../img/bg.jpg");
 	background-position: center; 
 	background-size: cover;
@@ -97,6 +96,11 @@ a:visited {
 }
 a:hover {
     color: #fff79c;
+	-o-transition:.4s;
+	-ms-transition:.4s;
+	-moz-transition:.4s;
+	-webkit-transition:.4s;
+	transition:.4s;
 }
 img {
     max-width: 100%;
@@ -164,6 +168,13 @@ li:before {
 }
 .imgshowcase {
 	display: inline-block;
+	transition-timing-function: ease-in-out;
+	transition: box-shadow 0.5s;
+}
+.imgshowcase:hover {
+	-webkit-box-shadow: 0px 0px 78px 0px rgba(0,128,203,0.5);
+	-moz-box-shadow: 0px 0px 78px 0px rgba(0,128,203,0.5);
+	box-shadow: 0px 0px 78px 0px rgba(0,128,203,0.5);
 }
 div.download {
 	margin:auto auto;
@@ -172,14 +183,14 @@ div.download {
 	font-size: 1.1em;
 	padding: 1.5em 0 0 0;
 }
-a.download {
-	font-size: 1.1em;
-	font-weight: 600;
-	color: #fff;
-	text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+.download a {
+	font-size: 1em;
+	color: #0080cb;
 }
-a.download:hover {
-	text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);
+.download a:hover {
+	color: #fff79c;
+	transition: text-shadow 0.4s;
+	text-shadow: 0px 0px 10px rgba(255, 247, 156, 1);
 }
 .download-title {
 	display: block;
@@ -235,4 +246,6 @@ a.download:hover {
 }
 .copyright a:hover {
 	color: #fff79c;
+	transition: text-shadow 0.4s;
+	text-shadow: 0px 0px 10px rgba(255, 247, 156, 1);
 }
